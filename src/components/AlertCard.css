@@ -1,0 +1,33 @@
+.alert-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  padding: 24px;
+}
+.alert-card-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.alert-card-title {
+  font-size: 18px;
+}
+
+.alert-card-info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.alert-severity {
+  background-color: red;
+  padding: 8px;
+  border-radius: 12px;
+}
+.alert-card-button {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+}

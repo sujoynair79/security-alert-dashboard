@@ -1,0 +1,16 @@
+.alert-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin: 0 auto;
+  width: 800px;
+  background-color: midnightblue;
+  color: white;
+  border-radius: 8px;
+}
+
+.alert-dashboard-noAlerts {
+  width: 100%;
+}

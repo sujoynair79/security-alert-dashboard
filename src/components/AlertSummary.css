@@ -1,0 +1,38 @@
+.alert-summary-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 8px;
+}
+.alert-summary-securityAlerts {
+  margin-top: 5px;
+  font-size: 24px;
+  padding-left: 12px;
+}
+.alert-summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px;
+  gap: 12px;
+  align-items: center;
+}
+
+.alert-severity-count,
+alert-resolved-count {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 18px;
+}
+
+.alert-severity-key,
+.alert-severity-value,
+.alert-resolved-key,
+.alert-resolved-value {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+}
