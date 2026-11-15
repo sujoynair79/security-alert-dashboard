@@ -1,7 +1,7 @@
 import AlertCardList from "./AlertCardList";
 import AlertSummary from "./AlertSummary";
 import { alerts as alertList } from "../mocks/alertdata";
-import "./AlertDasbboard.css";
+import "./AlertDashboard.css";
 import { getAlertCountBySeverity } from "../utils/utils";
 import { useState, type ChangeEvent } from "react";
 import type { Alert } from "../interfaces/Alert";
