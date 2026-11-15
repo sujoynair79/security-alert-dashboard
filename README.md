@@ -1,75 +1,87 @@
-# React + TypeScript + Vite
+# Security Alert Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React and TypeScript application for viewing, filtering, and managing security alerts. Built to demonstrate component-based architecture, type-safe state management, and interactive dashboard development.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Alert Dashboard:** Displays security alerts with relevant details, including severity, status, and timestamps.
+- **Severity Filtering:** Filter alerts by severity level (Low, Medium, High, Critical).
+- **Alert Summary:** View alert counts grouped by severity.
+- **Alert Management:** Mark alerts as resolved and see the updated dashboard state.
+- **Component-Based Design:** Separates dashboard, filtering, summary, and alert presentation into reusable React components.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** — Component-based UI development
+- **TypeScript** — Type-safe components, props, and data models
+- **Vite** — Development server and build tooling
+- **CSS** — Custom component styling
+- **ESLint** — Code quality and consistency
 
-## Expanding the ESLint configuration
+## Architecture
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The application uses a component-based architecture with clear separation of responsibilities.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Key components:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- `AlertDashboard` — Coordinates dashboard functionality and state.
+- `AlertCardList` — Renders the collection of alerts.
+- `AlertCard` — Displays individual alert information.
+- `AlertSummary` — Displays alert counts by severity.
+- `Filter` — Provides severity-based filtering.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Additional organization:
 
+- `interfaces/` — TypeScript interfaces and data types.
+- `mocks/` — Sample security alert data.
+- `utils/` — Utility functions for alert-related calculations.
+
+### Technical Highlights
+
+- Strongly typed React components and event handlers.
+- Derived data for filtering and severity summaries.
+- React state management for interactive alert updates.
+- Separation of UI components, data models, and utility functions.
+- Mock data to demonstrate dashboard functionality without requiring a backend.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/sujoynair79/security-alert-dashboard.git
+cd security-alert-dashboard
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
 ```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in your terminal.
+
+## Future Improvements
+
+- Integrate a backend API for real-time security alerts.
+- Add sorting and pagination.
+- Introduce unit and component tests.
+- Improve accessibility and responsive behavior.
+- Add support for larger datasets through server-side filtering.
+
+## About
+
+This project is part of a collection of hands-on React and TypeScript applications exploring frontend architecture, state management, and practical UI engineering patterns.
