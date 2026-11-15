@@ -2,6 +2,10 @@
 
 A React and TypeScript application for viewing, filtering, and managing security alerts. Built to demonstrate component-based architecture, type-safe state management, and interactive dashboard development.
 
+## Screenshot
+
+![Security Alert Dashboard](security-alert-dashboard.png)
+
 ## Features
 
 - **Alert Dashboard:** Displays security alerts with relevant details, including severity, status, and timestamps.
